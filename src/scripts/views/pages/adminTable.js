@@ -3,26 +3,26 @@
 const adminTable = {
     async render() {
         return `
-        <sidebar-admin></sidebar-admin>
-
-        <section class="content" id="content" tabindex="0">
-            <div class="adminTable" id="adminTable">
-        </section> 
-
-        <footer-bar></footer-bar>
-
+        <div id="wrapper">
+            <sidebar-admin></sidebar-admin>
+            <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <toolbar-admin></toolbar-admin>
+                <section class="content" id="adminTable" tabindex="0">
+            </section> 
+            </div>
+            <footer-bar></footer-bar>
+        </div>
         `;
     },
     async afterRender() {
         let listData = document.getElementById('adminTable');
         let post = `<!-- Begin Page Content -->
         <div class="container-fluid">
-            <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">Data Pengaduan</h1>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Data Pengaduan</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

@@ -2,6 +2,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/styles.scss';
 import '../styles/login.scss';
 import '../styles/form.scss';
+import '../styles/admin.scss';
 import './component/app-bar';
 import './component/sidebar-admin';
 import './component/toolbar-admin';

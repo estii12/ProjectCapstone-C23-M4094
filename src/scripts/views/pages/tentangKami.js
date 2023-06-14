@@ -5,8 +5,7 @@ const tentangKami = {
         return `
         <app-bar></app-bar>
 
-        <section class="content" id="content" tabindex="0">
-            <div class="tentangKami" id="tentangKami">
+        <section class="content" id="tentangKami" tabindex="0">
         </section> 
 
         <footer-bar></footer-bar>
