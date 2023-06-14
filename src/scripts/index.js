@@ -3,6 +3,7 @@ import '../styles/styles.scss';
 import '../styles/login.scss';
 import '../styles/form.scss';
 import '../styles/admin.scss';
+import '../styles/beranda.scss';
 import './component/app-bar';
 import './component/sidebar-admin';
 import './component/toolbar-admin';

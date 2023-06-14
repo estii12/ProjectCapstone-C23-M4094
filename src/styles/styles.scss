@@ -163,74 +163,9 @@ h2 {
 }
 
 
-
-.hero {
-  overflow: hidden;
-  height: 100%;
-  padding-bottom: 10px;
-}
-
-.hero figure div {
-  width: 20%;
-  float: left;
-}
-
-.hero figure img {
-  width: 100%;
-  float: left;
-  height: 400px;
-  object-fit: cover;
-}
-
-.hero figure {
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: 15s hero infinite;
-}
-
-@keyframes hero {
-  0% {
-    left: 0%
-  }
-
-  20% {
-    left: 0
-  }
-
-  25% {
-    left: -100%
-  }
-
-  45% {
-    left: -100%
-  }
-
-  50% {
-    left: -200%
-  }
-
-  70% {
-    left: -200%
-  }
-
-  75% {
-    left: -300%
-  }
-
-  95% {
-    left: -300%
-  }
-
-  100% {
-    left: -400%
-  }
-}
-
 //FOOTER
 footer {
-  padding: 20px;
+  padding-top: 10px;
   color: white;
   background-color: #3A2C08;
   display: flex;
