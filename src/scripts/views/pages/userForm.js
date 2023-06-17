@@ -76,6 +76,34 @@ const userForm = {
   },
   async afterRender() {
     let formReport = document.getElementById("report-form");
+    let buttonlogout = document.getElementById("logout");
+    const token = sessionStorage.getItem("jwt");
+    
+    buttonlogout.addEventListener("click", async (e) => {
+      axios
+          .get("http://localhost:3001/logout", {
+            headers: { token },
+          })
+          .then((response) => {
+            console.log(response);
+            if (response?.data?.code === 200) {
+              alert("Logout berhasil !");
+              sessionStorage.clear();
+              setTimeout(() => {
+                const link = document.createElement("a");
+                  link.href = "/#/login-user";
+                document.body.appendChild(link);
+                link.click();
+
+                // clean up "a" element & remove ObjectURL
+                document.body.removeChild(link);
+              }, 500);
+            }
+          })
+          .catch((errors) => {
+            console.log(errors);          
+          })
+    });
 
     const errorName = document.getElementById("error-name");
     const errorDate = document.getElementById("error-date");
@@ -93,7 +121,7 @@ const userForm = {
 
     formReport.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const token = sessionStorage.getItem("jwt");
+      
 
       const inputForms = {
         name: formReport.elements["nama"].value,

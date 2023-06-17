@@ -57,6 +57,7 @@ const adminTable = {
                                     <th>Rincian</th>
                                     <th>Pelapor</th>
                                     <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -93,12 +94,40 @@ const adminTable = {
                 ? "Kasus sudah ditindaklanjuti"
                 : "Kasus belum ditindaklanjuti"
             }</td>
+            <td><button>Done</button></td>
             `;
       });
 
       return html;
     }
     listData.innerHTML = post;
+    let buttonlogout = document.getElementById("logout");
+    const token = sessionStorage.getItem("jwt");
+    buttonlogout.addEventListener("click", async (e) => {
+        axios
+            .get("http://localhost:3001/logout", {
+              headers: { token },
+            })
+            .then((response) => {
+              console.log(response);
+              if (response?.data?.code === 200) {
+                alert("Logout berhasil !");
+                sessionStorage.clear();
+                setTimeout(() => {
+                  const link = document.createElement("a");
+                    link.href = "/#/login-user";
+                  document.body.appendChild(link);
+                  link.click();
+  
+                  // clean up "a" element & remove ObjectURL
+                  document.body.removeChild(link);
+                }, 500);
+              }
+            })
+            .catch((errors) => {
+              console.log(errors);          
+            })
+      });
   },
 };
 
