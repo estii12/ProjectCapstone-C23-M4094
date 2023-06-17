@@ -250,11 +250,6 @@ p.footerbottom {
   text-align: justify;
 }
 
-
-#hamburger{
-display:none
-}
-
 .card-home{
   text-align: center;
   margin-top: 30px;
@@ -345,20 +340,20 @@ display:none
 .body-card h1 {
   margin: 0;
 }
-#chefs {
+#ttgKami {
   padding-top: 35px;
   padding-bottom: 30px;
 }
 
-#chefs .section-heading h6 {
+#ttgKami .section-heading h6 {
   padding-left: 0px;
 }
 
-#chefs .section-heading h6:before {
+#ttgKami .section-heading h6:before {
   display: none;
 }
 
-#chefs .chef-item {
+#ttgKami .ttgKami-item {
   width: 350px;
   height: 400px;
   text-align: center;
@@ -370,25 +365,25 @@ display:none
   border-radius: 10px;
 }
 
-#chefs .chef-item:hover {
-  border-color: #fb5849;
+#ttgKami .ttgKami-item:hover {
+  border-color: #E7C367;
 }
 
-#chefs .chef-item:hover .down-content h4 {
-  color: #fb5849;
+#ttgKami .ttgKami-item:hover .down-content h4 {
+  color: #E7C367;
 }
 
-#chefs .chef-item .thumb {
+#ttgKami .ttgKami-item .thumb {
   position: relative;
 }
 
-#chefs .chef-item .thumb img {
+#ttgKami .ttgKami-item .thumb img {
   width: 150px;
   overflow: hidden;
   position: relative;
 }
 
-#chefs .chef-item .thumb .overlay {
+#ttgKami .ttgKami-item .thumb .overlay {
   position: absolute;
   background-color: #2a2a2a;
   border-radius: 3px;
@@ -402,7 +397,7 @@ display:none
   transition: all .3s;
 }
 
-#chefs .chef-item .thumb ul.social-icons {
+#ttgKami .ttgKami-item .thumb ul.social-icons {
   position: absolute;
   z-index: 11;
   top: 50%;
@@ -414,12 +409,12 @@ display:none
   visibility: hidden;
 }
 
-#chefs .chef-item .thumb ul.social-icons li {
+#ttgKami .ttgKami-item .thumb ul.social-icons li {
   display: inline-block;
   margin: 0px 5px;
 }
 
-#chefs .chef-item .thumb ul.social-icons li a {
+#ttgKami .ttgKami-item .thumb ul.social-icons li a {
   width: 40px;
   height: 40px;
   background-color: #fff;
@@ -431,32 +426,32 @@ display:none
   transition: all .5s;
 }
 
-#chefs .chef-item .thumb ul.social-icons li a:hover {
-  background-color: #fb5849;
+#ttgKami .ttgKami-item .thumb ul.social-icons li a:hover {
+  background-color: #8b5c16;
 }
 
-#chefs .chef-item:hover .overlay {
+#ttgKami .ttgKami-item:hover .overlay {
   opacity: .9;
   visibility: visible;
 }
 
-#chefs .chef-item:hover ul.social-icons {
+#ttgKami .ttgKami-item:hover ul.social-icons {
   opacity: 1;
   visibility: visible;
 }
 
-#chefs .chef-item .down-content {
+#ttgKami .ttgKami-item .down-content {
   padding: 20px 0px;
 }
 
-#chefs .chef-item .down-content h4 {
+#ttgKami .ttgKami-item .down-content h4 {
   transition: all .3s;
   font-size: 20px;
   font-weight: 700;
   color: #2a2a2a;
 }
 
-#chefs .chef-item .down-content span {
+#ttgKami .ttgKami-item .down-content span {
   font-size: 14px;
   color: #2a2a2a;
 }
@@ -549,6 +544,7 @@ display:none
     height: 3px;
     background-color: #FF8303;
     margin: 6px 0;
+    border-radius: 10px;
   }
 
   .nav-bar {

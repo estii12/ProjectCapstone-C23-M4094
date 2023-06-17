@@ -1,8 +1,29 @@
 /* eslint-disable linebreak-style */
+import axios from "axios";
 
+let reports = [];
 const adminTable = {
-    async render() {
-        return `
+  async render() {
+    const token = sessionStorage.getItem("jwt");
+
+    try {
+      await axios
+        .get("http://localhost:3001/report", {
+          headers: { token },
+        })
+        .then((response) => {
+          if (response?.data?.code === 200) {
+            reports = response?.data?.data;
+          }
+        })
+        .catch((errors) => {
+          console.log(errors);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+
+    return `
         <div id="wrapper">
             <sidebar-admin></sidebar-admin>
             <div id="content-wrapper" class="d-flex flex-column">
@@ -14,10 +35,10 @@ const adminTable = {
             <footer-bar></footer-bar>
         </div>
         `;
-    },
-    async afterRender() {
-        let listData = document.getElementById('adminTable');
-        let post = `<!-- Begin Page Content -->
+  },
+  async afterRender() {
+    let listData = document.getElementById("adminTable");
+    let post = `<!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
@@ -30,32 +51,16 @@ const adminTable = {
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Tanggal Kejadian</th>
+                                    <th>Lokasi</th>
+                                    <th>Jenis Kasus</th>
+                                    <th>Rincian</th>
+                                    <th>Pelapor</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                            </tfoot>
                             <tbody>
-                                <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                </tr>
+                                ${setTableReport(reports)}
                             </tbody>
                         </table>
                     </div>
@@ -63,8 +68,38 @@ const adminTable = {
             </div>
         </div>
         <!-- /.container-fluid -->`;
-        listData.innerHTML = post;
-    },
+
+    function setTableReport(reports) {
+      let html = "";
+
+      reports.forEach((report) => {
+        const today = new Date(report.caseDate);
+        const yyyy = today.getFullYear();
+        let mm = today.getMonth() + 1; // Months start at 0!
+        let dd = today.getDate();
+
+        if (dd < 10) dd = "0" + dd;
+        if (mm < 10) mm = "0" + mm;
+
+        html += `<tr>
+            <td>${report.name}</td>
+            <td>${dd}-${mm}-${yyyy}</td>
+            <td>${report.location}</td>
+            <td>${report.caseType}</td>
+            <td>${report.desc}</td>
+            <td>${report.user.name}</td>
+            <td>${
+              report.status
+                ? "Kasus sudah ditindaklanjuti"
+                : "Kasus belum ditindaklanjuti"
+            }</td>
+            `;
+      });
+
+      return html;
+    }
+    listData.innerHTML = post;
+  },
 };
 
 export default adminTable;
