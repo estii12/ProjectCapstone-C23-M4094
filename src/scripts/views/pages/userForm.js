@@ -4,11 +4,9 @@ const userForm = {
     async render() {
         return `
         <toolbar-admin></toolbar-admin>
-
         <section class="content" id="content" tabindex="0">
             <div class="userForm" id="userForm">
         </section> 
-
         <footer-bar></footer-bar>
 
         `;

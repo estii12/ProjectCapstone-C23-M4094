@@ -37,7 +37,7 @@ const tentangKami = {
                         </div>
                         <div class="down-content">
                             <h4>Della Jannata Febiana</h4>
-                            <span>Back-End Developer</span>
+                            <span>Full Stack Web Developer</span>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const tentangKami = {
                         </div>
                         <div class="down-content">
                             <h4>Esti Yogiyanti</h4>
-                            <span>Front-End Developer</span>
+                            <span>Full Stack Web Developer</span>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ const tentangKami = {
                         </div>
                         <div class="down-content">
                             <h4>Restu Raina Rahmah</h4>
-                            <span>Front-End Developer</span>
+                            <span>Full Stack Web Developer</span>
                         </div>
                     </div>
                 </div>

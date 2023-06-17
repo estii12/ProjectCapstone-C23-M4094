@@ -46,7 +46,7 @@ const home = {
                     <div class="col-md-5">
                         <h6 class="title mb-3">Penyakit pada Sistem Reproduksi Manusia</h6>
                         <p>KOMPAS.com - Sistem reproduksi manusia dapat terserang berbagai penyakit yang menggangu kesehatan organ reproduksi ataupun kemampuan reproduksi penderitanya. Apa saja penyakit pada sistem reproduksi manusia?</p>
-                        <button class="btn btn-outline-primary btn-sm">Learn More</button>
+                        <a class="btn btn-outline-primary btn-sm" href="https://www.kompas.com/skola/read/2023/04/06/170000869/penyakit-pada-sistem-reproduksi-manusia">Selengkapnya</a>
                     </div>
                 </div>
                 <!-- End of Row -->
@@ -63,7 +63,7 @@ const home = {
                     <div class="col-md-5">
                         <h6 class="title mb-3">Dampak dan Pencegahan Seks Bebas</h6>
                         <p>KOMPAS.com - Perilaku seks bebas adalah segala cara mengekspresikan dan melepaskan dorongan seksual yang berasal dari kematangan organ seksual (berkencan hingga melakukan kontak sosial) yang dinilai tidak sesuai dengan norma. </p>
-                        <button class="btn btn-outline-primary btn-sm">Learn More</button>
+                        <a class="btn btn-outline-primary btn-sm" href="https://www.kompas.com/skola/read/2023/03/13/061500069/dampak-dan-pencegahan-seks-bebas-">Selengkapnya</a>
                     </div>
                     <div class="col-md-6">
                         <div class="img-wrapper">
