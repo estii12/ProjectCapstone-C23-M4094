@@ -475,6 +475,11 @@ p.footerbottom {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
+.btn-logout{
+  background-color: #b88606;
+  padding: 10px;
+  border-radius: 30%;
+}
 
 @media screen and (max-width: 1200px) {
   header {
@@ -600,6 +605,147 @@ p.footerbottom {
     flex-direction: column;
   }
 }
+/* about section start */
+
+.about_section {
+  width: 100%;
+  float: left;
+}
+
+.about_taital_main {
+  width: 100%;
+  float: left;
+  padding: 120px 0px;
+}
+
+.about_taital {
+  width: 100%;
+  float: left;
+  font-size: 40px;
+  color: #E7C367;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #4c4c4b;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.about_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #4c4c4b;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.read_bt {
+  width: 175px;
+  float: left;
+  padding-top: 40px;
+}
+
+.read_bt a {
+  width: 100%;
+  float: left;
+  font-size: 18px;
+  background-color: #252525;
+  color: #ffffff;
+  text-align: center;
+  padding: 8px;
+}
+
+.read_bt a:hover {
+  color: #ffffff;
+  background-color: #b88606;
+}
+
+/* about section end */
+.testimonial_section_2 {
+  width: 100%;
+  float: left;
+  padding: 0px 40px 30px 40px;
+  position: relative;
+}
+.client_section {
+  width: 100%;
+  float: left;
+}
+
+.client_taital {
+  width: 100%;
+  float: left;
+  font-size: 40px;
+  color: #f76d37;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.client_text {
+  width: 100%;
+  font-size: 16px;
+  color: #252525;
+  margin: 0 auto;
+}
+
+.client_section_2 {
+  width: 100%;
+  float: left;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+.testimonial_section_2::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  border-top: 3px solid #252525;
+  border-left: 3px solid #252525;
+  top: 12px;
+  left: 0px;
+  right: initial;
+}
+
+.testimonial_section_2::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  border-bottom: 3px solid #252525;
+  border-right: 3px solid #252525;
+  top: 12px;
+  left: initial;
+  right: 0px;
+}
+.client_name_text {
+  width: 100%;
+  float: left;
+  font-size: 24px;
+  color: #f76d37;
+  text-transform: uppercase;
+  padding-left: 100px;
+  font-weight: bold;
+}
+
+.quick_icon {
+  text-align: right;
+  padding-left: 30px;
+}
+
+.customer_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #252525;
+  margin: 0px;
+}
+
 
 /* mobile */
 @media screen and (max-width: 576px) {

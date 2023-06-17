@@ -23,21 +23,21 @@ const articles = {
         <section class="card">
             <div class="card-thumbnail">
                 <img class="img_card" src="${article.pictureId}" alt="img ${
-    article.name
-}">
-            </div>
-            <div class="card-content">
-                <div class="list-header">
-                </div>
-                <h3 class="card-title"><a href="#">${article.name}</a></h3>
-                <p class="card-description">${article.description.slice(
-        0,
-        200
-    )}...</p>
+                    article.name
+                }">
+                        </div>
+                        <div class="card-content">
+                            <div class="list-header">
+                            </div>
+                            <h3 class="card-title"><a href="#">${article.name}</a></h3>
+                            <p class="card-description">${article.description.slice(
+                    0,
+                    200
+                )}...</p>
                 <a class="btn-card" href="#/article/${
-    article.id
-}">Selengkapnya</a>
-            </div>
+                    article.id
+                }">Selengkapnya</a>
+                            </div>
         </section>`;
         });
 
