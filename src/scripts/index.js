@@ -13,7 +13,11 @@ import './views/pages/article';
 import './views/pages/tentangKami';
 import './views/pages/loginUser';
 import './views/pages/regisUser';
+import './views/pages/detailArticle';
 import swRegister from './utils/sw-register';
+// import 'lazysizes';
+// // eslint-disable-next-line import/no-extraneous-dependencies
+// import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const app = new App({
     button: document.querySelector('#hamburger'),
