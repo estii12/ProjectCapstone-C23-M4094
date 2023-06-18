@@ -34,7 +34,7 @@ const articles = {
                     0,
                     200
                 )}...</p>
-                <a class="btn-card" href="#/article/${
+                <a class="btn-card" href="#/detail-article/${
                     article.id
                 }">Selengkapnya</a>
                             </div>

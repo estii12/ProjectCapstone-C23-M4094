@@ -1,12 +1,14 @@
 /* eslint-disable linebreak-style */
-import UrlParser from '../../routes/url-parser';
-import article from '../../utils/data-initiator';
-import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import UrlParser from "../../routes/url-parser";
+import article from "../../utils/data-initiator";
+import { createRestaurantDetailTemplate } from "../templates/template-creator";
 
 const detailArticle = {
-    async render() {
-        return `
-        <div class="loader-container" id="loader-container">
+  async render() {
+    return `
+            <app-bar></app-bar>
+
+            <div class="loader-container" id="loader-container">
           <div id="loader"></div>
         </div> 
         <section class="content" id="content" tabindex="0">
@@ -16,16 +18,22 @@ const detailArticle = {
           <div class="detail" id="detail"></div>
           </card>
           </div>
-        </section>  
-        `;
-    },
+        </section> 
 
-    async afterRender() {
-        const url = UrlParser.parseActiveUrlWithoutCombiner();
-        const { articledetail } = await article.detailRestaurant(url.id);
-        const articleContainer = document.querySelector('#detail');
-        articleContainer.innerHTML = createRestaurantDetailTemplate(articledetail);
-    },
+            <footer-bar></footer-bar>
+        `;
+  },
+
+  async afterRender() {
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const detailArticleContainer = document.querySelector("#detail");
+
+    const data = article.find((article) => article.id === url.id);
+    detailArticleContainer.innerHTML =
+      createRestaurantDetailTemplate(data);
+
+    
+  },
 };
 
 export default detailArticle;

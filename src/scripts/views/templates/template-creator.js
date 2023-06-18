@@ -1,6 +1,6 @@
 const createRestaurantDetailTemplate = (article) => `
 <div class="all-desc">
-<img class="restaurant-picture lazyload" crossorigin="anonymous" alt="${article.name}" src="" tabindex="0" >
+<img class="restaurant-picture" crossorigin="anonymous" alt="${article.pictureId}" src="${article.pictureId}" tabindex="0" >
 <div class="detailRestaurant">
     <div class="detail-desc">
     <h2><i class="fas fa-store"></i> ${article.name}</h2>

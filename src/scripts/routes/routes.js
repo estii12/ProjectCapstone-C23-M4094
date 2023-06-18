@@ -6,6 +6,7 @@ import RegisUser from '../views/pages/regisUser';
 import AdminDashboard from '../views/pages/adminDashboard';
 import adminTable from '../views/pages/adminTable';
 import userForm from '../views/pages/userForm';
+import detailArticle from '../views/pages/detailArticle';
 
 const routes = {
     '/': Home,
@@ -17,6 +18,7 @@ const routes = {
     '/admin-dash': AdminDashboard,
     '/admin-table': adminTable,
     '/user-form': userForm,
+    '/detail-article/:id': detailArticle,
     
 
 };
