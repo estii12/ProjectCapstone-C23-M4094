@@ -24,6 +24,11 @@ class AppBar extends HTMLElement {
             </div>
         </header>
             `;
+        const hamburgerButton = document.getElementById("hamburger");
+        hamburgerButton.addEventListener("click", function () {
+            const navBar = document.getElementById("nav-bar");
+            navBar.style.display = (navBar.style.display === "block") ? "none" : "block";
+        });
     }
 }
 
