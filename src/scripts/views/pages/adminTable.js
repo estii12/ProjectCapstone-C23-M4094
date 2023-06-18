@@ -38,6 +38,7 @@ const adminTable = {
   },
   async afterRender() {
     let listData = document.getElementById("adminTable");
+    
     let post = `<!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- DataTales Example -->
@@ -71,8 +72,9 @@ const adminTable = {
         <!-- /.container-fluid -->`;
 
     function setTableReport(reports) {
+      
       let html = "";
-
+      
       reports.forEach((report) => {
         const today = new Date(report.caseDate);
         const yyyy = today.getFullYear();
@@ -94,15 +96,57 @@ const adminTable = {
                 ? "Kasus sudah ditindaklanjuti"
                 : "Kasus belum ditindaklanjuti"
             }</td>
-            <td><button>Done</button></td>
+            <td><button  class="updateStatus" name="${report._id}">Selesai</button></td>
             `;
       });
 
       return html;
     }
+
+    
     listData.innerHTML = post;
-    let buttonlogout = document.getElementById("logout");
     const token = sessionStorage.getItem("jwt");
+    let buttonlogout = document.getElementById("logout");
+    let btnupdateStatus = document.getElementsByClassName("updateStatus");
+    for(let i=0; i<btnupdateStatus.length; i++){
+      btnupdateStatus[i].addEventListener("click",async (element)=>{
+          // alert(element.target.name);
+          console.log(token);
+          const reportId = element.target.name;
+          await axios.patch(`http://localhost:3001/report/${reportId}`, {status : true} , {
+            headers: { token },
+          })
+          .then((response) => {
+            console.log(response);
+            if (response?.data?.code === 200) {
+              alert("Status berhasil diubah !");
+              location.reload();
+            }
+          })
+          .catch((errors) => {
+            console.log(errors);          
+          })
+        })
+    }
+    // btnupdateStatus.addEventListener("click",async (element)=>{
+    //   // alert(element.target.name);
+    //   console.log(token);
+    //   const reportId = element.target.name;
+    //   await axios.patch(`http://localhost:3001/report/${reportId}`, {status : true} , {
+    //     headers: { token },
+    //   })
+    //   .then((response) => {
+    //     console.log(response);
+    //     if (response?.data?.code === 200) {
+    //       alert("Status berhasil diubah !");
+    //       location.reload();
+    //     }
+    //   })
+    //   .catch((errors) => {
+    //     console.log(errors);          
+    //   })
+    // })
+    // console.log(btnupdateStatus);
     buttonlogout.addEventListener("click", async (e) => {
         axios
             .get("http://localhost:3001/logout", {
@@ -129,6 +173,7 @@ const adminTable = {
             })
       });
   },
+
 };
 
 export default adminTable;
