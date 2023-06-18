@@ -19,7 +19,7 @@ const tentangKami = {
             <div class="row">
                 <div class="col-lg-4 offset-lg-4 text-center">
                     <div class="section-heading">
-                        <h2>Tentang Kami</h2>
+                        <h2>IDENTITAS DEVELOPER KEEPME</h2>
                         <p>Tim C23-M4094 yang membangun website inovasi tentang edukasi pergaulan bebas yang bernama KeepMe.</p>
                     </div>
                 </div>
@@ -37,6 +37,7 @@ const tentangKami = {
                         <div class="down-content">
                             <h4>Della Jannata Febiana</h4>
                             <span>Full Stack Web Developer</span>
+                            <p>F059YB358</p>
                         </div>
                     </div>
                 </div>
@@ -52,6 +53,7 @@ const tentangKami = {
                         <div class="down-content">
                             <h4>Esti Yogiyanti</h4>
                             <span>Full Stack Web Developer</span>
+                            <p>F008YB350</p>
                         </div>
                     </div>
                 </div>
@@ -67,6 +69,7 @@ const tentangKami = {
                         <div class="down-content">
                             <h4>Restu Raina Rahmah</h4>
                             <span>Full Stack Web Developer</span>
+                            <p>F142YB330</p>
                         </div>
                     </div>
                 </div>
